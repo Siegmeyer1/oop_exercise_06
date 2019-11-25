@@ -140,6 +140,7 @@ namespace containers {
 
     template<class T, class Allocator>
     void queue<T, Allocator>::delete_by_number(size_t N) {
+        N++;
         forward_iterator it = this->begin();
         for (size_t i = 1; i <= N; ++i) {
             if (i == N) break;
